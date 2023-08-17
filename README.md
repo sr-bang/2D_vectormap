@@ -2,7 +2,7 @@
 
 ### Dependencies:
 ```
-
+pip install -r requirements.txt
 ```
 ### Installation
 1. Open3D
