@@ -37,12 +37,10 @@ if __name__ == '__main__':
 
     error_functions = [ransac_error, msac_error, mlesac_error]
 
-
-    directory_path = "/home/susu/runtest"
+    directory_path = "/put/directory/path/here"
     os.makedirs(directory_path, exist_ok=True)
-
          
-    input_path = "/home/susu/DR_pipeline/best.pcd"
+    input_path = "input.pcd"
     input_file = o3d.io.read_point_cloud(input_path)
 
     # Down-sample the loaded point cloud to reduce computation time
@@ -58,27 +56,16 @@ if __name__ == '__main__':
     # Plot the result
     in_points = plot_dominant_plane(pcd_sampled, best_inliers, best_plane)
 
-    # wall_points = wall(input_file,best_plane)
-
-    # in_points_path = os.path.join(directory_path, 'after_ransac.ply')
-    # in_points = o3d.io.read_point_cloud(in_points_path)
-
     # Remove statistical outlier
-
     pcd = remove_statistical_outlier(in_points, nb_neighbors, std_ratio)
-    # wall_pcd = remove_statistical_outlier(wall_points, nb_neighbors, std_ratio)
-
+    
+    # Color Thresholding
     filtered_points, filtered_colors = color_thresholding(pcd)
-    # wall_filtered_points, wall_filtered_colors = wall_color_thresholding(filtered_points, filtered_colors)
-    # wall_filtered_points = np.asarray(wall_points.points)
-    # wall_filtered_colors = np.asarray(wall_points.colors)
+
+    # Transforms used 
     transforms = "voxel_grid_downsampling"
     filtered_points, filtered_colors = select_transforms(filtered_points, filtered_colors, transforms)
     
-    # wall_filtered_points = np.asarray(wall_pcd.points)
-    # wall_filtered_colors = np.asarray(wall_pcd.colors)
-    # wall_filtered_points, wall_filtered_colors = select_transforms(wall_filtered_points, wall_filtered_colors, transforms)
-
     # Create an Open3D point cloud object
     point_cloud = o3d.geometry.PointCloud()
     point_cloud.points = o3d.utility.Vector3dVector(filtered_points)
@@ -100,29 +87,5 @@ if __name__ == '__main__':
     vis.run()
     vis.capture_screen_image(image)
     vis.destroy_window()
-
-
-    # #  Create an Open3D point cloud object
-    # point_cloud = o3d.geometry.PointCloud()
-    # point_cloud.points = o3d.utility.Vector3dVector(wall_filtered_points)
-    # point_cloud.colors = o3d.utility.Vector3dVector(wall_filtered_colors)  
-
-    # # Create a visualization window
-    # vis = o3d.visualization.Visualizer()
-    # vis.create_window()
-
-    # # Add the point cloud to the visualization
-    # vis.add_geometry(point_cloud)
-
-    # # Customize the visualization
-    # opt = vis.get_render_option()
-    # opt.background_color = np.asarray([0, 0, 0])
-    # opt.point_size = 2  # Adjust the point size as needed
-
-    # image = os.path.join(directory_path, 'wall_image.png')
-    # vis.run()
-    # vis.capture_screen_image(image)
-    # vis.destroy_window()
-
 
 
