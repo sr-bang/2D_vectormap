@@ -8,7 +8,7 @@ import argparse
 from fit_plane import *
 from error_funcs import ransac_error, msac_error, mlesac_error
 from plot_results import *
-from transform import *
+from Script.transform import *
 from Misc import *
 
 if __name__ == '__main__':
@@ -37,8 +37,8 @@ if __name__ == '__main__':
 
     error_functions = [ransac_error, msac_error, mlesac_error]
 
-    # directory_path = "/put/directory/path/here"
-    # os.makedirs(directory_path, exist_ok=True)
+    directory_path = "../Output"
+    os.makedirs(directory_path, exist_ok=True)
          
     input_path = "input.pcd"
     input_file = o3d.io.read_point_cloud(input_path)
@@ -83,7 +83,7 @@ if __name__ == '__main__':
     opt.background_color = np.asarray([0, 0, 0])
     opt.point_size = 2  # Adjust the point size as needed
 
-    image = 'image.png'
+    image = os.path.join(directory_path, 'image.png')
     vis.run()
     vis.capture_screen_image(image)
     vis.destroy_window()
