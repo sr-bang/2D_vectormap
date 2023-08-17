@@ -1,9 +1,13 @@
 # 3D_mapping
 
-### Installation
-1. Open3D installation
+### Dependencies:
+```
 
-Make sure you have Python 3.8
+```
+### Installation
+1. Open3D
+
+Make sure you have Python 3.8 version.
 ```
 pip install open3d        # or
 pip install open3d-cpu    # Smaller CPU only wheel on x86_64 Linux (since v0.17+)
