@@ -22,7 +22,7 @@ if __name__ == '__main__':
     Parser.add_argument('--voxel_size',type=float, default=0.005)
     Parser.add_argument('--nb_neighbors',type=int, default=35)
     Parser.add_argument('--std_ratio',type=float, default=1.0) 
-    Parser.add_argument('--pointcloud_idx',type=int, default=1) 
+    Parser.add_argument('--pointcloud_idx',type=int, default=1)
 
 
     Args = Parser.parse_args()
@@ -37,8 +37,8 @@ if __name__ == '__main__':
 
     error_functions = [ransac_error, msac_error, mlesac_error]
 
-    directory_path = "/put/directory/path/here"
-    os.makedirs(directory_path, exist_ok=True)
+    # directory_path = "/put/directory/path/here"
+    # os.makedirs(directory_path, exist_ok=True)
          
     input_path = "input.pcd"
     input_file = o3d.io.read_point_cloud(input_path)
@@ -83,7 +83,7 @@ if __name__ == '__main__':
     opt.background_color = np.asarray([0, 0, 0])
     opt.point_size = 2  # Adjust the point size as needed
 
-    image = os.path.join(directory_path, 'image.png')
+    image = 'image.png'
     vis.run()
     vis.capture_screen_image(image)
     vis.destroy_window()
