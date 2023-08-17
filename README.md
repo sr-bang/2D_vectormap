@@ -24,12 +24,12 @@ pip install --user open3d
 # or
 python3 -m pip install --user open3d
 ```
-For more information, refer http://www.open3d.org/docs/release/getting_started.html
+For more information, refer [Open3D Documentation](http://www.open3d.org/docs/release/getting_started.html).
 
 ### Dataset
-Note: Store the input.pcd (or custom dataset) into main directory outside the script folder
-Link to download the dataset: 
-https://shorturl.at/rwyAI
+Note: Store the input.pcd (or custom dataset) into main directory outside the script folder.
+
+Download dataset from [here](https://shorturl.at/rwyAI). 
 
 ### Run Demo
 ```
