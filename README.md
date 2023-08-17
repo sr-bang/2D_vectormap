@@ -3,7 +3,8 @@
 ### Dataset
 Link to download the dataset: 
 
-### To run the code
+### Run Demo
 ```
+git clone https://github.com/...
 python3 main.py
 ```
