@@ -425,7 +425,7 @@ def draw_rectangles(img, lines,color = 'yellow', alpha=0.5):
 
 
 if __name__ == "__main__":
-    img_folder = '../output/'
+    img_folder = '../Output/'
     out_folder = '../output_img/'
     clipLimit=2.0
     tileGridSize=(8, 8)
