@@ -36,3 +36,14 @@ Download dataset from [here](https://shorturl.at/rwyAI).
 git clone https://github.com/...
 python3 main.py
 ```
+
+main.py gives you an output image. You can tweek the output image you obtained by changing arguments of main.py
+
+Once you obtain desired image of cloud file
+run the following python file 
+```
+git clone https://github.com/...
+python3 DLSD.py
+```
+
+You can observe the final output in the form of png and svg in output_img folder 
