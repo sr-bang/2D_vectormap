@@ -26,7 +26,7 @@ For more information, refer [Open3D Documentation](http://www.open3d.org/docs/re
 **2. DeepLSD Model**
 
 ### DeepLSD
-Implementation of the paper [DeepLSD: Line Segment Detection and Refinement with Deep Image Gradients](https://arxiv.org/abs/2212.07766), accepted at CVPR 2023. **DeepLSD is a generic line detector that combines the robustness of deep learning with the accuracy of handcrafted detectors**. It can be used to extract **generic line segments from images in-the-wild**, and is **suitable for any task requiring high precision**, such as homography estimation, visual localization, and 3D reconstruction. By predicting a line distance and angle fields, **it can furthermore refine any existing line segments** through an optimization.
+Implementation of the paper [DeepLSD: Line Segment Detection and Refinement with Deep Image Gradients](https://arxiv.org/abs/2212.07766), accepted at CVPR 2023. DeepLSD is a generic line detector that combines the robustness of deep learning with the accuracy of handcrafted detectors. It can be used to extract generic line segments from images in-the-wild, and is suitable for any task requiring high precision, such as homography estimation, visual localization, and 3D reconstruction. By predicting a line distance and angle fields, it can furthermore refine any existing line segments through an optimization.
 
 #### Installation
 First clone the repository and its submodules in script folder:
@@ -41,7 +41,6 @@ To test the pre-trained model on your images, without the final line refinement,
 ```
 bash quickstart_install.sh
 ```
-You can then test it with the notebook `notebooks/quickstart_demo.ipynb`.
 
 #### Full install
 
