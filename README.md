@@ -1,9 +1,6 @@
 # 3D_mapping
 
-## Dependencies
-```
-pip install -r requirements.txt
-```
+
 ## Installation
 **1. Open3D**
 
@@ -32,7 +29,7 @@ For more information, refer [Open3D Documentation](http://www.open3d.org/docs/re
 Implementation of the paper [DeepLSD: Line Segment Detection and Refinement with Deep Image Gradients](https://arxiv.org/abs/2212.07766), accepted at CVPR 2023. **DeepLSD is a generic line detector that combines the robustness of deep learning with the accuracy of handcrafted detectors**. It can be used to extract **generic line segments from images in-the-wild**, and is **suitable for any task requiring high precision**, such as homography estimation, visual localization, and 3D reconstruction. By predicting a line distance and angle fields, **it can furthermore refine any existing line segments** through an optimization.
 
 #### Installation
-First clone the repository and its submodules:
+First clone the repository and its submodules in script folder:
 ```
 git clone --recurse-submodules https://github.com/cvg/DeepLSD.git
 cd DeepLSD
@@ -66,6 +63,11 @@ This repo uses a base experiment folder (EXPER_PATH) containing the output of al
 
 #### Usage
 We provide two pre-trained models for DeepLSD: [deeplsd_wireframe.tar](https://www.polybox.ethz.ch/index.php/s/FQWGkH57UNTqlJZ) and [deeplsd_md.tar](https://www.polybox.ethz.ch/index.php/s/XVb30sUyuJttFys), trained respectively on the Wireframe and MegaDepth datasets. The former can be used for easy indoor datasets, while the latter is more generic and works outdoors and on more challenging scenes.
+
+## Dependencies
+```
+pip install -r requirements.txt
+```
 
 ## Dataset
 Note: Store the input.pcd (or custom dataset) into main directory outside the script folder.
