@@ -5,7 +5,7 @@
 **Download our Repository:**
 ```
 git clone https://github.com/sr-bang/2D_vectormap.git
-cd Script
+cd 2D_vectormap/Script
 ```
 
 
