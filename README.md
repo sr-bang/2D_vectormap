@@ -9,7 +9,7 @@ cd <name_of_your_direct>
 ```
 **Download our Repository:**
 ```
-git clone https://github.com/...
+git clone https://github.com/sr-bang/2D_vectormap.git
 cd Script
 ```
 
