@@ -1,4 +1,14 @@
 # 3D_mapping
+Create a directory:
+```
+mkdir <name_of_your_direc>
+cd <name_of_your_direct>
+```
+Download our Repository:
+```
+git clone https://github.com/...
+cd Script
+```
 
 
 ## Installation
@@ -29,7 +39,7 @@ For more information, refer [Open3D Documentation](http://www.open3d.org/docs/re
 Implementation of the paper [DeepLSD: Line Segment Detection and Refinement with Deep Image Gradients](https://arxiv.org/abs/2212.07766), accepted at CVPR 2023. DeepLSD is a generic line detector that combines the robustness of deep learning with the accuracy of handcrafted detectors. It can be used to extract generic line segments from images in-the-wild, and is suitable for any task requiring high precision, such as homography estimation, visual localization, and 3D reconstruction. By predicting a line distance and angle fields, it can furthermore refine any existing line segments through an optimization.
 
 #### Installation
-First clone the repository and its submodules in script folder:
+First clone the repository and its submodules in Script folder:
 ```
 git clone --recurse-submodules https://github.com/cvg/DeepLSD.git
 cd DeepLSD
@@ -65,6 +75,7 @@ We provide two pre-trained models for DeepLSD: [deeplsd_wireframe.tar](https://w
 
 ## Dependencies
 ```
+cd ../
 pip install -r requirements.txt
 ```
 
@@ -75,7 +86,7 @@ Download dataset from [here](https://shorturl.at/rwyAI).
 
 ## Run Demo
 ```
-git clone https://github.com/...
+cd Script/
 python3 main.py
 ```
 
