@@ -40,18 +40,31 @@ if __name__ == '__main__':
     directory_path = "../Output"
     os.makedirs(directory_path, exist_ok=True)
          
-    input_path = "input.pcd"
+    input_path = "../input.pcd"
     input_file = o3d.io.read_point_cloud(input_path)
 
     # Down-sample the loaded point cloud to reduce computation time
     pcd_sampled = input_file.voxel_down_sample(voxel_size)
     
-    # Apply plane-fitting algorithmpcd_sampled
+    # Apply plane-fitting algorithm
     best_plane, best_inliers, num_iterations = fit_plane(pcd=pcd_sampled,
                                                          confidence=confidence,
                                                          inlier_threshold=inlier_threshold,
                                                          min_sample_distance=min_sample_distance,
                                                          error_func=error_functions[error_function_idx])
+    
+    # # Apply in-built plane-fitting algorithm
+
+    # plane_model, inliers = input_file.segment_plane(distance_threshold=0.03,
+    #                                      ransac_n=3,
+    #                                      num_iterations=200)
+    # [a, b, c, d] = plane_model
+    # print(f"Plane equation: {a:.2f}x + {b:.2f}y + {c:.2f}z + {d:.2f} = 0")
+
+    # inlier_cloud = input_file.select_by_index(inliers)
+    # # Remove statistical outlier
+    # pcd = remove_statistical_outlier(inlier_cloud, nb_neighbors=5, std_ratio=1)
+
 
     # Plot the result
     in_points = plot_dominant_plane(pcd_sampled, best_inliers, best_plane)
