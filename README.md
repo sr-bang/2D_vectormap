@@ -73,6 +73,8 @@ This repo uses a base experiment folder (EXPER_PATH) containing the output of al
 #### Usage
 We provide two pre-trained models for DeepLSD: [deeplsd_wireframe.tar](https://www.polybox.ethz.ch/index.php/s/FQWGkH57UNTqlJZ) and [deeplsd_md.tar](https://www.polybox.ethz.ch/index.php/s/XVb30sUyuJttFys), trained respectively on the Wireframe and MegaDepth datasets. The former can be used for easy indoor datasets, while the latter is more generic and works outdoors and on more challenging scenes.
 
+Download and extract the weights in <name_of_your_direc>/Script/Deeplsd/weights/
+
 ## Dependencies
 ```
 cd ../
