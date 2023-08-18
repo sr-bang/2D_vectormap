@@ -77,7 +77,7 @@ Download and extract the weights in <name_of_your_direc>/Script/Deeplsd/weights/
 
 ## Dependencies
 ```
-cd ../
+cd ../../
 pip install -r requirements.txt
 ```
 
