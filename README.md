@@ -2,10 +2,6 @@
 
 **Problem Statement**: To build a 3D map from the point cloud data of parking garage collected using RGB-D camera and translating it into a robust and reliable 2D vector map for autonomous vehicle parking.
 
-**Create a directory:**
-```
-mkdir <name_of_your_direc>
-cd <name_of_your_direct>
 ```
 **Download our Repository:**
 ```
